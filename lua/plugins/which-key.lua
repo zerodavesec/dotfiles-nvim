@@ -105,7 +105,7 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>lw', desc = '[L]ine [W]rapping', icon = '󰘤' },
 
       -- LSP and Goto's
-      { '<leader>g', group = '[G]oto and LSP Actions', icon = { icon = '󰢱', color = 'orange' } },
+      { '<leader>g', group = '[g]oto and LSP Actions', icon = { icon = '󰢱', color = 'orange' } },
       --rest of keybindins for this and descriptions in lsp.lua
       --
       --
