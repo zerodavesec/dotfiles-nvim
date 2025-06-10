@@ -10,7 +10,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     error('Error cloning lazy.nvim:\n' .. out)
   end
 end
-
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 require('lazy').setup {
@@ -28,4 +27,6 @@ require('lazy').setup {
   require 'plugins.autocomp',
   require 'plugins.autoformat',
   require 'plugins.snacks',
+  --  require 'plugins.picker',
 }
+Snacks.notify.info 'All plugins loaded successfully...'
