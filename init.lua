@@ -16,7 +16,7 @@ require('lazy').setup {
   require 'plugins.lazydev',
   require 'plugins.lsp',
   require 'plugins.telescope',
-  require 'plugins.themes.rose-pine',
+  require 'plugins.themes.catppuccin',
   require 'plugins.neotree',
   require 'plugins.treesitter',
   require 'plugins.which-key',
@@ -27,6 +27,7 @@ require('lazy').setup {
   require 'plugins.autocomp',
   require 'plugins.autoformat',
   require 'plugins.snacks',
+  require 'plugins.gitsigns',
   --  require 'plugins.picker',
 }
 Snacks.notify.info 'All plugins loaded successfully...'

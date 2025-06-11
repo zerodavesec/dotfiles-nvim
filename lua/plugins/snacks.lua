@@ -56,29 +56,30 @@ return {
     },
     keys = {
         -- Keymap to open lazygit
+
         {
-            '<leader>Gg',
+            '<leader>gG',
             function()
                 require('snacks').lazygit()
             end,
             desc = 'Lazy[G]it',
         },
         {
-            '<leader>GG',
+            '<leader>gg',
             function()
                 require('snacks').lazygit { cwd = vim.fn.expand '%:p:h' }
             end,
             desc = 'Lazy[G]it (current file)',
         },
         {
-            '<leader>Gf',
+            '<leader>gf',
             function()
                 require('snacks').lazygit.log_file()
             end,
             desc = 'Lazygit Current [F]ile History',
         },
         {
-            '<leader>Gl',
+            '<leader>gL',
             function()
                 require('snacks').lazygit.log()
             end,
