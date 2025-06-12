@@ -228,11 +228,33 @@ return {
           },
         },
       },
-      -- clangd = {},
+      -- C config
+      clangd = {},
 
       -- GOLANG config
       gopls = {},
       golangci_lint_ls = {}, -- Optional: additional linting beyond gopls
+
+      -- JSON config
+      jsonls = {},
+
+      -- YAML config
+      yamlls = {
+        settings = {
+          yaml = {
+            schemas = {
+              ['https://json.schemastore.org/github-workflow.json'] = '/.github/workflows/*',
+              ['https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json'] = '/docker-compose*.yml',
+            },
+          },
+        },
+      },
+      -- SQL config
+      sqlls = {},
+      shellcheck = {},
+
+      -- BASH config
+      bashls = {},
 
       -- LUA config
       lua_ls = {
