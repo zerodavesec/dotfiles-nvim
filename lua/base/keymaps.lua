@@ -43,8 +43,8 @@ vim.keymap.set('n', '<leader>tn', ':tabn<CR>', opts)
 vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts)
 
 vim.keymap.set('n', '<leader>lw', function()
-  vim.wo.wrap = not vim.wo.wrap
-  print('Line Wrapping: ' .. (vim.wo.wrap and 'on' or 'off'))
+    vim.wo.wrap = not vim.wo.wrap
+    print('Line Wrapping: ' .. (vim.wo.wrap and 'on' or 'off'))
 end, { desc = '[L]ine [W]rapping' })
 
 -- Indent mode

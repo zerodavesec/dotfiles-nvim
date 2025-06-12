@@ -14,6 +14,18 @@ return {
 
     -- Allows extra capabilities provided by blink.cmp
     'saghen/blink.cmp',
+    {
+      -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
+      -- used for completion, annotations and signatures of Neovim apis
+      'folke/lazydev.nvim',
+      ft = 'lua',
+      opts = {
+        library = {
+          -- Load luvit types when the `vim.uv` word is found
+          { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
+        },
+      },
+    },
   },
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -196,14 +208,21 @@ return {
     local servers = {
       ruff = {},
       pyright = {
+        on_attach = function(client, bufnr)
+          -- Disable Pyright's formatting
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentRangeFormattingProvider = false
+          -- Keep other LSP features
+        end,
         settings = {
           pyright = {
-            disableOrganizeImports = true, -- Using Ruff
+            disableOrganizeImports = true, -- Using Ruff ✓
           },
           python = {
             analysis = {
-              ignore = { '*' }, -- Using Ruff
-              typeCheckingMode = 'off', -- Using mypy
+              typeCheckingMode = 'basic', -- Keep for IDE features
+              ignore = {}, -- Or specify specific error codes to ignore
+              autoImportCompletions = true,
             },
           },
         },
@@ -227,18 +246,13 @@ return {
         -- capabilities = {},
         settings = {
           Lua = {
-            format = {
-              enable = true,
-              defaultConfig = {
-                indent_style = 'space',
-                indent_size = 2,
-              },
-            },
-            diagnostics = {
-              globals = { 'vim' },
-            },
             completion = {
               callSnippet = 'Replace',
+            },
+            diagnostics = { disable = { 'missing-fields' } },
+            capabilities = {
+              documentFormattingProvider = false, -- disable formatting from lua_ls
+              documentRangeFormattingProvider = false,
             },
           },
         },

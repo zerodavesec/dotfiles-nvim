@@ -54,7 +54,7 @@ return {
     local config = require('gitsigns.config').config
     local was_enabled = config.signcolumn
     require('gitsigns').toggle_signs()
-    local status = was_enabled and 'ON' or 'OFF'
+    local status = was_enabled and 'OFF' or 'ON'
     Snacks.notify('Git Signs is ' .. status, { title = 'Gitsigns' })
   end, { desc = 'Toggle [S]igns' }),
 
