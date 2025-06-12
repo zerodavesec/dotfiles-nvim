@@ -9,8 +9,8 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 vim.keymap.set('n', 'n', 'nzzzv', opts)
 vim.keymap.set('n', 'N', 'Nzzzv', opts)
 
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ':m-2<CR>gv=gv')
+vim.keymap.set('v', 'J', ":'<,'>move '>+1<CR>gv=gv", { desc = 'Move selection down' })
+vim.keymap.set('v', 'K', ":'<,'>move '<-2<CR>gv=gv", { desc = 'Move selection up' })
 --Buffers
 
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
@@ -43,8 +43,8 @@ vim.keymap.set('n', '<leader>tn', ':tabn<CR>', opts)
 vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts)
 
 vim.keymap.set('n', '<leader>lw', function()
-    vim.wo.wrap = not vim.wo.wrap
-    print('Line Wrapping: ' .. (vim.wo.wrap and 'on' or 'off'))
+  vim.wo.wrap = not vim.wo.wrap
+  print('Line Wrapping: ' .. (vim.wo.wrap and 'on' or 'off'))
 end, { desc = '[L]ine [W]rapping' })
 
 -- Indent mode
@@ -53,8 +53,12 @@ vim.keymap.set('v', '<S-Tab>', '<gv', opts)
 
 -- Diagnostic keymaps
 
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+vim.keymap.set('n', '<leader>D', function()
+  vim.diagnostic.jump { count = -1 }
+end, { desc = 'Previous Diagnostic' })
+vim.keymap.set('n', '<leader>d', function()
+  vim.diagnostic.jump { count = 1 }
+end, { desc = 'Next Diagnostic' })
 -- vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
