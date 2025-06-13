@@ -27,6 +27,7 @@ require('lazy').setup {
   require 'plugins.autoformat',
   require 'plugins.snacks',
   require 'plugins.gitsigns',
+  require 'plugins.neoscroll',
   --  require 'plugins.picker',
   --  require 'plugins.lazydev',
 }
