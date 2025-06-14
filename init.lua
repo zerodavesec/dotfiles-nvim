@@ -24,7 +24,7 @@ require('lazy').setup {
   require 'plugins.autoformat',
   require 'plugins.snacks',
   require 'plugins.gitsigns',
-  require 'plugins.neoscroll',
+  -- require 'plugins.neoscroll',
   require 'plugins.miscellaneous',
 
   require 'plugins.themes.tokyonight', -- Change to change coloscheme
