@@ -19,7 +19,6 @@ require('lazy').setup {
   require 'plugins.treesitter',
   require 'plugins.which-key',
   require 'plugins.indentline',
-  require 'plugins.autopairs',
   require 'plugins.bufferline',
   require 'plugins.lualine',
   require 'plugins.autocomp',
@@ -27,6 +26,7 @@ require('lazy').setup {
   require 'plugins.snacks',
   require 'plugins.gitsigns',
   require 'plugins.neoscroll',
+  require 'plugins.miscellaneous',
 
   require 'plugins.themes.tokyonight', -- Change to change coloscheme
   -- Supported themes are nord, rose-pine, catppuccin, tokyonight
