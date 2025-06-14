@@ -15,7 +15,6 @@ rtp:prepend(lazypath)
 require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.telescope',
-  require 'plugins.themes.catppuccin',
   require 'plugins.neotree',
   require 'plugins.treesitter',
   require 'plugins.which-key',
@@ -28,6 +27,9 @@ require('lazy').setup {
   require 'plugins.snacks',
   require 'plugins.gitsigns',
   require 'plugins.neoscroll',
+  require 'plugins.themes.tokyonight', -- Change to change theme,
+  -- Supported themes are nord, rose-pine, catppuccin, tokyonight
+  -- 'plugins.themes.<colorscheme>'
   --  require 'plugins.picker',
   --  require 'plugins.lazydev',
 }
