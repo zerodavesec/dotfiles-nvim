@@ -13,7 +13,6 @@ return {
       end,
     },
     { 'nvim-telescope/telescope-ui-select.nvim' },
-    { 'xiyaowong/telescope-emoji.nvim' },
 
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
   },
@@ -71,7 +70,5 @@ return {
     vim.keymap.set('n', '<leader>fn', function()
       builtin.find_files { cwd = vim.fn.stdpath 'config' }
     end, { desc = '[F]ind [N]eovim files' })
-
-    vim.keymap.set('n', '<leader>fe', '<cmd>Telescope emoji<CR>', { desc = '[E]mojis' })
   end,
 }

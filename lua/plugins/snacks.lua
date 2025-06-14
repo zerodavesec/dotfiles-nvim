@@ -56,7 +56,6 @@ return {
   },
   keys = {
     -- Keymap to open lazygit
-
     {
       '<leader>gG',
       function()
