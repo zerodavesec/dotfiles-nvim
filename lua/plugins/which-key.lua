@@ -48,33 +48,33 @@ return { -- Useful plugin to show you pending keybinds.
     -- Document existing key chains
     spec = {
       -- Help
-      { '<leader>?', desc = 'Keybinding Help', icon = { icon = '󰮥', color = 'cyan' } },
+      { '<leader>?', desc = 'Keybinding Help', icon = { icon = '󰮥', color = 'orange' } },
 
       -- telescope
       { '<leader>f', group = '[F]ind', icon = { icon = '' } },
-      { '<leader>fh', desc = '[H]elp', icon = { icon = '󰮥', color = 'cyan' } },
-      { '<leader>fk', desc = '[K]eymaps', icon = { icon = '󰌌', color = 'cyan' } },
-      { '<leader>fn', desc = '[N]eovim Files', icon = { icon = '', color = 'cyan' } },
-      { '<leader>ff', desc = '[F]iles', icon = { icon = '󰱽', color = 'cyan' } },
-      { '<leader>fd', desc = '[D]iagnostics', icon = { icon = '', color = 'cyan' } },
+      { '<leader>fh', desc = '[H]elp', icon = { icon = '󰮥' } },
+      { '<leader>fk', desc = '[K]eymaps', icon = { icon = '󰌌' } },
+      { '<leader>fn', desc = '[N]eovim Files', icon = { icon = '' } },
+      { '<leader>ff', desc = '[F]iles', icon = { icon = '󰱽' } },
+      { '<leader>fd', desc = '[D]iagnostics', icon = { icon = '' } },
       {
         '<leader>ft',
         desc = '[T]elescope Built-ins',
-        icon = { icon = '', color = 'cyan' },
+        icon = { icon = '' },
       },
-      { '<leader>fw', desc = '[W]ord', icon = { icon = '', color = 'cyan' } },
-      { '<leader>fg', desc = '[G]rep in CWD', icon = { icon = '󱎸', color = 'cyan' } },
-      { '<leader>fr', desc = '[R]esume Search', icon = { icon = '', color = 'cyan' } },
-      { '<leader>f.', desc = 'Recent Files', icon = { icon = '', color = 'cyan' } },
-      { '<leader>fb', desc = 'Open [B]uffers', icon = { icon = '', color = 'cyan' } },
+      { '<leader>fw', desc = '[W]ord', icon = { icon = '' } },
+      { '<leader>fg', desc = '[G]rep in CWD', icon = { icon = '󱎸' } },
+      { '<leader>fr', desc = '[R]esume Search', icon = { icon = '' } },
+      { '<leader>f.', desc = 'Recent Files', icon = { icon = '' } },
+      { '<leader>fb', desc = 'Open [B]uffers', icon = { icon = '' } },
       {
         '<leader>fc',
         desc = 'FuzzyFind in [C]urrent Buffer',
-        icon = { icon = '󱁵', color = 'cyan' },
+        icon = { icon = '󱁵' },
       },
 
       -- Neotree Explorer
-      { '<leader>e', desc = 'Open [E]xplorer', icon = { icon = '󰙅', color = 'cyan' } },
+      { '<leader>e', desc = 'Open [E]xplorer', icon = { icon = '󰙅', color = 'orange' } },
       -- Buffers
       { '<leader>b', group = '[B]uffers', icon = '' },
       { '<leader>bb', desc = '[B] Create Buffer' },
@@ -105,17 +105,24 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>lw', desc = '[L]ine [W]rapping', icon = '󰘤' },
 
       -- LSP and Goto's
-      { '<leader>G', group = '[G]oto and LSP Actions', icon = { icon = '󰢱', color = 'orange' } },
+      { '<leader>G', group = '[G]oto and LSP Actions', icon = { icon = '󰢱' } },
       --rest of keybindins for this and descriptions in lsp.lua
       --
       --
       -- LazyGit Actions
-      { '<leader>g', group = '[g]it LazyGit', icon = { icon = '', color = 'cyan' } },
-      { '<leader>gg', desc = 'Lazy[g]it Current File', icon = { icon = '', color = 'cyan' } },
-      { '<leader>gG', desc = 'Lazy[G]it', icon = { icon = '', color = 'cyan' } },
-      { '<leader>gf', desc = 'Lazygit [F]ile History', icon = { icon = '', color = 'cyan' } },
-      { '<leader>gL', desc = 'Lazygit [L]og', icon = { icon = '', color = 'cyan' } },
+      { '<leader>g', group = '[g]it LazyGit', icon = { icon = '' } },
+      { '<leader>gg', desc = 'Lazy[g]it Current File', icon = { icon = '' } },
+      { '<leader>gG', desc = 'Lazy[G]it', icon = { icon = '' } },
+      { '<leader>gf', desc = 'Lazygit [F]ile History', icon = { icon = '' } },
+      { '<leader>gL', desc = 'Lazygit [L]og', icon = { icon = '' } },
       -- rest of keybindings for LazyGit in lazygit.lua
+
+      -- Toggle Comment
+      { '<leader>c', desc = '[C]omment/Uncomment', icon = { icon = '󰆄', color = 'orange' } },
+
+      { '<leader>F', desc = '[F]ormat Code', icon = { icon = '󰝖', color = 'orange' } },
+      { '<leader>d', desc = 'Next Diagnostic', icon = { icon = '󰝖', color = 'orange' } },
+      { '<leader>D', desc = 'Previous Diagnostic', icon = { icon = '󰛖', color = 'orange' } },
     },
   },
 }
