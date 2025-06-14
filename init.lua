@@ -27,7 +27,8 @@ require('lazy').setup {
   require 'plugins.snacks',
   require 'plugins.gitsigns',
   require 'plugins.neoscroll',
-  require 'plugins.themes.tokyonight', -- Change to change theme,
+
+  require 'plugins.themes.tokyonight', -- Change to change coloscheme
   -- Supported themes are nord, rose-pine, catppuccin, tokyonight
   -- 'plugins.themes.<colorscheme>'
   --  require 'plugins.picker',
