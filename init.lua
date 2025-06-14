@@ -32,6 +32,5 @@ require('lazy').setup {
   -- Supported themes are nord, rose-pine, catppuccin, tokyonight
   -- 'plugins.themes.<colorscheme>'
   --  require 'plugins.picker',
-  --  require 'plugins.lazydev',
 }
 Snacks.notify.info 'All plugins loaded successfully...'
