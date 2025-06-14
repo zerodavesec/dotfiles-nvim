@@ -15,7 +15,6 @@ rtp:prepend(lazypath)
 require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.telescope',
-  --  require 'plugins.neotree',
   require 'plugins.treesitter',
   require 'plugins.which-key',
   require 'plugins.indentline',
@@ -31,6 +30,5 @@ require('lazy').setup {
   require 'plugins.themes.tokyonight', -- Change to change coloscheme
   -- Supported themes are nord, rose-pine, catppuccin, tokyonight
   -- 'plugins.themes.<colorscheme>'
-  --  require 'plugins.picker',
 }
 Snacks.notify.info 'All plugins loaded successfully...'
