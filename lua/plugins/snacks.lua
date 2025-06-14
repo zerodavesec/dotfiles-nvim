@@ -3,6 +3,12 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
+    picker = {},
+    explorer = {
+      win = {
+        width = 30,
+      },
+    },
     notifier = {
       timeout = 3000, -- default timeout in ms
       width = { min = 40, max = 0.4 },
@@ -56,6 +62,13 @@ return {
   },
   keys = {
     -- Keymap to open lazygit
+    {
+      '<leader>e',
+      function()
+        require('snacks').explorer.open()
+      end,
+      desc = 'Open [E]xplorer',
+    },
     {
       '<leader>gG',
       function()
