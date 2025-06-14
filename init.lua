@@ -15,7 +15,7 @@ rtp:prepend(lazypath)
 require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.telescope',
-  require 'plugins.neotree',
+  --  require 'plugins.neotree',
   require 'plugins.treesitter',
   require 'plugins.which-key',
   require 'plugins.indentline',
